@@ -30,6 +30,12 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Demonstrate secret usage
+        env:
+          DEMO_SECRET: ${{ secrets.DEMO_SECRET }}
+        run: |
+          if [ -n "$DEMO_SECRET" ]; then echo "Secret is configured (value is masked)"; fi
+
       - name: Build / package
         run: npm run build
 
