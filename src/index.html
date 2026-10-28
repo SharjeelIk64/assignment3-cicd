@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CI/CD Demo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CI/CD Demo App</h1>
+  <input id="a" type="number" value="2"> +
+  <input id="b" type="number" value="3">
+  <button id="btn">Add</button>
+  <p id="result"></p>
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("btn").onclick = () => {
+      const a = Number(document.getElementById("a").value);
+      const b = Number(document.getElementById("b").value);
+      document.getElementById("result").textContent = "Result: " + add(a, b);
+    };
+  </script>
+</body>
+</html>
